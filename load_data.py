@@ -75,7 +75,7 @@ def plot_prices(train_prices, test_prices=None):
     plt.xlabel('time')
     plt.ylabel('price')
     plt.plot(range(len(train_prices)), train_prices, 'b')
-    if test_prices:
+    if test_prices is not None:
         plt.plot(range(len(train_prices), len(train_prices) + len(test_prices)), test_prices, 'g')
     plt.show()
 
